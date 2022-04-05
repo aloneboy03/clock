@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    color: #222;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn--mode{
+    background-color: #222;
+    color: white;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-weight: 600;
+}
+
+.clock{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 111;
+}
+
+.hour{
+    position: absolute;   
+}
+
+.hours{
+    width: 0.2rem;
+    height: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 50%;
+}
+.hours::before{
+    content: '';
+    position: absolute;
+    width: 0.4rem;
+    height: 5rem;
+    background-color: #246;
+    z-index: 10;
+    border-radius: 0.6rem 0.6rem 0 0;
+    /* transform: rotateZ(deg); */
+    transition: 1s;
+}
+
+.minut{
+    position: absolute;
+}
+
+.minutes{
+    width: 1.9px;
+    height: 1.9px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 50%;
+}
+
+.minutes::before{
+    content: '';
+    position: absolute;
+    width: 0.39rem;
+    height: 6rem;
+    background-color: #387;
+    z-index: 11;
+    border-radius: 0.6rem 0.6rem 0 0;
+    /* transform: rotateZ(); */
+    transition: 1s;
+}
+
+.second{
+    position: absolute;
+}
+
+.seconds{
+    width: 2.3px;
+    height: 2.3px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 50%;
+}
+
+.seconds::before{
+    content: '';
+    position: absolute;
+    width: 0.2rem;
+    height: 8rem;
+    background-color: red;
+    z-index: 12;
+    border-radius: 0.6rem 0.6rem 0 0;
+    transition: 1s;
+}
+
+.now--hour{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.day{
+    text-align: center;
+    font-weight: 600;
+}
+
+.day .now--day__number{
+    border-radius: 50%;
+    background-color: #222;
+    color: white;
+    padding: 0.3rem;
+}
