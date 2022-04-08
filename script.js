@@ -51,7 +51,15 @@ setInterval(function(){
     }
 
 
-    document.querySelector('.now--day__number').textContent = date;
+    // document.querySelector('.now--day__number').textContent = date;
+
+    if(date >= 10){
+        document.querySelector('.now--day__number').textContent = date;
+    }
+    else{
+        document.querySelector('.now--day__number').textContent = `0${date}`;
+    }
+
     let dateName = day.getDay();
     switch(dateName){
         case 1: nowDateName.textContent = "Monday"; break;
